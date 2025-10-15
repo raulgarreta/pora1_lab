@@ -1,0 +1,1 @@
+/home/raul/workspace_mac/stanford/pora1/autonomy_ws/src/s3_basic/build/s3_basic/ament_cmake_core/s3_basicConfig-version.cmake
