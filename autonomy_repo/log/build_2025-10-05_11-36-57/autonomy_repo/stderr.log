@@ -1,0 +1,32 @@
+[31mCMake Error at /usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "/usr/bin/cc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2266a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2266a.dir/build.make CMakeFiles/cmTC_2266a.dir/build
+    gmake[1]: Entering directory '/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp'
+    Building C object CMakeFiles/cmTC_2266a.dir/testCCompiler.c.o
+    /usr/bin/cc    -o CMakeFiles/cmTC_2266a.dir/testCCompiler.c.o -c /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp/testCCompiler.c
+    /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp/testCCompiler.c:11:1: fatal error: error closing /tmp/cc6OZ96m.s: No space left on device
+       11 | { (void)argv; return argc-1;}
+          | ^
+    compilation terminated.
+    gmake[1]: *** [CMakeFiles/cmTC_2266a.dir/build.make:78: CMakeFiles/cmTC_2266a.dir/testCCompiler.c.o] Error 1
+    gmake[1]: Leaving directory '/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp'
+    gmake: *** [Makefile:127: cmTC_2266a/fast] Error 2
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+[0m

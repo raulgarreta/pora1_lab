@@ -1,0 +1,43 @@
+[0.040s] Invoking command in '/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/install/autonomy_repo
+[0.464s] -- The C compiler identification is unknown
+[0.798s] -- The CXX compiler identification is unknown
+[0.811s] -- Detecting C compiler ABI info
+[0.904s] -- Detecting C compiler ABI info - failed
+[0.905s] -- Check for working C compiler: /usr/bin/cc
+[0.994s] -- Check for working C compiler: /usr/bin/cc - broken
+[0.995s] [31mCMake Error at /usr/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake:69 (message):
+[0.995s]   The C compiler
+[0.995s] 
+[0.995s]     "/usr/bin/cc"
+[0.995s] 
+[0.995s]   is not able to compile a simple test program.
+[0.995s] 
+[0.995s]   It fails with the following output:
+[0.995s] 
+[0.995s]     Change Dir: /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp
+[0.995s]     
+[0.996s]     Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2266a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2266a.dir/build.make CMakeFiles/cmTC_2266a.dir/build
+[0.996s]     gmake[1]: Entering directory '/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp'
+[0.996s]     Building C object CMakeFiles/cmTC_2266a.dir/testCCompiler.c.o
+[0.996s]     /usr/bin/cc    -o CMakeFiles/cmTC_2266a.dir/testCCompiler.c.o -c /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp/testCCompiler.c
+[0.996s]     /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp/testCCompiler.c:11:1: fatal error: error closing /tmp/cc6OZ96m.s: No space left on device
+[0.996s]        11 | { (void)argv; return argc-1;}
+[0.996s]           | ^
+[0.996s]     compilation terminated.
+[0.996s]     gmake[1]: *** [CMakeFiles/cmTC_2266a.dir/build.make:78: CMakeFiles/cmTC_2266a.dir/testCCompiler.c.o] Error 1
+[0.996s]     gmake[1]: Leaving directory '/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeTmp'
+[0.996s]     gmake: *** [Makefile:127: cmTC_2266a/fast] Error 2
+[0.996s]     
+[0.996s]     
+[0.996s] 
+[0.996s]   
+[0.996s] 
+[0.996s]   CMake will not be able to correctly generate this project.
+[0.996s] Call Stack (most recent call first):
+[0.996s]   CMakeLists.txt:2 (project)
+[0.996s] 
+[0.996s] [0m
+[0.997s] -- Configuring incomplete, errors occurred!
+[0.997s] See also "/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeOutput.log".
+[0.997s] See also "/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeError.log".
+[1.008s] Invoked command in '/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/install/autonomy_repo

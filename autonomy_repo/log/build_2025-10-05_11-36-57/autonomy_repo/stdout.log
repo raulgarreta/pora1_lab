@@ -1,0 +1,9 @@
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - broken
+-- Configuring incomplete, errors occurred!
+See also "/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeOutput.log".
+See also "/home/raul/workspace_mac/stanford/pora1/homeworks/AA274a-HW1-F25/autonomy_repo/build/autonomy_repo/CMakeFiles/CMakeError.log".
