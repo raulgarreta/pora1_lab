@@ -12,11 +12,16 @@ class HeadingController(BaseHeadingController):
 
     def __init__(self, node_name: str) -> None:
         super().__init__(node_name)
-        self.kp = 0.2
-
+        
+        self.declare_parameter("kp",2.0)
+    
+    @property
+    def set_kp(self) -> float:
+        return self.get_parameter("kp").value
+    
     def compute_control_with_goal(self, state: TurtleBotState, goal: TurtleBotState) -> TurtleBotControl:
         error = wrap_angle(goal.theta - state.theta)
-        omega = self.kp * error
+        omega = self.get_parameter("kp").value * error
         return TurtleBotControl(v=0.0, omega=omega)
         
 
