@@ -57,7 +57,8 @@ class NavigationNode(BaseNavigator):
         """
 
         dt = t - self.t_prev
-        x_d, xd_d, xdd_d, y_d, yd_d, ydd_d = self.get_desired_state(t)
+        # x_d, xd_d, xdd_d, y_d, yd_d, ydd_d = self.get_desired_state(t)
+        x_d, xd_d, xdd_d, y_d, yd_d, ydd_d = plan.desired_state(t)
 
         ########## Code starts here ##########
         # avoid singularity
