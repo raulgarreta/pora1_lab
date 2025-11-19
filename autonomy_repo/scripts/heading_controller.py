@@ -14,6 +14,7 @@ class HeadingController(BaseHeadingController):
         super().__init__(node_name)
         
         self.declare_parameter("kp",2.0)
+        self.declare_parameter("theta_thresh",0.01)
     
     @property
     def set_kp(self) -> float:
@@ -21,6 +22,11 @@ class HeadingController(BaseHeadingController):
     
     def compute_control_with_goal(self, state: TurtleBotState, goal: TurtleBotState) -> TurtleBotControl:
         error = wrap_angle(goal.theta - state.theta)
+        self.get_logger().debug(f"Error: {error}")
+        self.get_logger().debug(f"Goal theta: {goal.theta}")
+        self.get_logger().debug(f"State theta: {state.theta}")
+        if abs(error) < self.get_parameter("theta_thresh").value:
+            return TurtleBotControl(v=0.0, omega=0.0)
         omega = self.get_parameter("kp").value * error
         return TurtleBotControl(v=0.0, omega=omega)
         

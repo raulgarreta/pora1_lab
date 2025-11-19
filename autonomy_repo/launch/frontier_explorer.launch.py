@@ -49,5 +49,10 @@ def generate_launch_description():
                     {"use_sim_time": use_sim_time},
                 ],
             ),
+
+            Node(
+                executable="frontier_explorer_controller.py",
+                package="autonomy_repo",
+            ),
         ]
     )

@@ -1,7 +1,7 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-from utils import plot_line_segments
+# import matplotlib.pyplot as plt
+# import matplotlib.patches as patches
+# from utils import plot_line_segments
 
 class AStar(object):
     """Represents a motion planning problem to be solved using A*"""
@@ -132,29 +132,29 @@ class AStar(object):
             current = path[-1]
         return list(reversed(path))
 
-    def plot_path(self, fig_num=0, show_init_label=True):
-        """Plots the path found in self.path and the obstacles"""
-        if not self.path:
-            return
+    # def plot_path(self, fig_num=0, show_init_label=True):
+    #     """Plots the path found in self.path and the obstacles"""
+    #     if not self.path:
+    #         return
 
-        self.occupancy.plot(fig_num)
+    #     self.occupancy.plot(fig_num)
 
-        solution_path = np.asarray(self.path)
-        plt.plot(solution_path[:,0],solution_path[:,1], color="green", linewidth=2, label="A* solution path", zorder=10)
-        plt.scatter([self.x_init[0], self.x_goal[0]], [self.x_init[1], self.x_goal[1]], color="green", s=30, zorder=10)
-        if show_init_label:
-            plt.annotate(r"$x_{init}$", np.array(self.x_init) + np.array([.2, .2]), fontsize=16)
-        plt.annotate(r"$x_{goal}$", np.array(self.x_goal) + np.array([.2, .2]), fontsize=16)
-        plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.03), fancybox=True, ncol=3)
+    #     solution_path = np.asarray(self.path)
+    #     plt.plot(solution_path[:,0],solution_path[:,1], color="green", linewidth=2, label="A* solution path", zorder=10)
+    #     plt.scatter([self.x_init[0], self.x_goal[0]], [self.x_init[1], self.x_goal[1]], color="green", s=30, zorder=10)
+    #     if show_init_label:
+    #         plt.annotate(r"$x_{init}$", np.array(self.x_init) + np.array([.2, .2]), fontsize=16)
+    #     plt.annotate(r"$x_{goal}$", np.array(self.x_goal) + np.array([.2, .2]), fontsize=16)
+    #     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.03), fancybox=True, ncol=3)
 
-        plt.axis([0, self.occupancy.width, 0, self.occupancy.height])
+    #     plt.axis([0, self.occupancy.width, 0, self.occupancy.height])
 
-    def plot_tree(self, point_size=15):
-        plot_line_segments([(x, self.came_from[x]) for x in self.open_set if x != self.x_init], linewidth=1, color="blue", alpha=0.2)
-        plot_line_segments([(x, self.came_from[x]) for x in self.closed_set if x != self.x_init], linewidth=1, color="blue", alpha=0.2)
-        px = [x[0] for x in self.open_set | self.closed_set if x != self.x_init and x != self.x_goal]
-        py = [x[1] for x in self.open_set | self.closed_set if x != self.x_init and x != self.x_goal]
-        plt.scatter(px, py, color="blue", s=point_size, zorder=10, alpha=0.2)
+    # def plot_tree(self, point_size=15):
+    #     plot_line_segments([(x, self.came_from[x]) for x in self.open_set if x != self.x_init], linewidth=1, color="blue", alpha=0.2)
+    #     plot_line_segments([(x, self.came_from[x]) for x in self.closed_set if x != self.x_init], linewidth=1, color="blue", alpha=0.2)
+    #     px = [x[0] for x in self.open_set | self.closed_set if x != self.x_init and x != self.x_goal]
+    #     py = [x[1] for x in self.open_set | self.closed_set if x != self.x_init and x != self.x_goal]
+    #     plt.scatter(px, py, color="blue", s=point_size, zorder=10, alpha=0.2)
 
     def solve(self):
         """
@@ -220,14 +220,14 @@ class DetOccupancyGrid2D(object):
                 return False
         return True
 
-    def plot(self, fig_num=0):
-        """Plots the space and its obstacles"""
-        fig = plt.figure(fig_num)
-        ax = fig.add_subplot(111, aspect='equal')
-        for obs in self.obstacles:
-            ax.add_patch(
-            patches.Rectangle(
-            obs[0],
-            obs[1][0]-obs[0][0],
-            obs[1][1]-obs[0][1],))
-        ax.set(xlim=(0,self.width), ylim=(0,self.height))
+    # def plot(self, fig_num=0):
+    #     """Plots the space and its obstacles"""
+    #     fig = plt.figure(fig_num)
+    #     ax = fig.add_subplot(111, aspect='equal')
+    #     for obs in self.obstacles:
+    #         ax.add_patch(
+    #         patches.Rectangle(
+    #         obs[0],
+    #         obs[1][0]-obs[0][0],
+    #         obs[1][1]-obs[0][1],))
+    #     ax.set(xlim=(0,self.width), ylim=(0,self.height))
